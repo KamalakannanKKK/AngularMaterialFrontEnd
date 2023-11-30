@@ -1,1 +1,25 @@
 
+<mat-sidenav-container>
+    <!-- mode=push push main content to side -->
+    <!-- mode=side  fixed move main content -->
+    <mat-sidenav  mode="push" [(opened)]="opened">
+        <h1 class="mat-display-4">SideNav</h1>
+        <mat-list>
+            <mat-list-item>DashBoard</mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>Detail</mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>Password Change</mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>Logout</mat-list-item>
+          </mat-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <button (click)="opened=!opened">   
+            <mat-button-toggle value="left">
+            <mat-icon>format_align_left
+            </mat-icon>
+          </mat-button-toggle>
+        </button><span>Student Portal</span>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
