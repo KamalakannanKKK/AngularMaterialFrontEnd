@@ -1,0 +1,15 @@
+<mat-toolbar><mat-menu #mainmenu="matMenu" >
+    <button mat-menu-item [matMenuTriggerFor]="submenu1">FrontEnd</button>
+    <button mat-menu-item [matMenuTriggerFor]="submenu2">BackEnd</button>
+</mat-menu>
+<button  class="center" mat-raised-button [matMenuTriggerFor]="mainmenu">Software</button>
+<mat-menu  #submenu1="matMenu">
+    <button mat-menu-item >ReactJS</button>
+    <button mat-menu-item>NodeJs</button>
+    <button mat-menu-item>AngularJs</button>
+</mat-menu>
+<mat-menu  #submenu2="matMenu">
+    <button mat-menu-item >SpringBoot</button>
+    <button mat-menu-item>Hibernate</button>
+    <button mat-menu-item>Java</button>
+</mat-menu></mat-toolbar>
