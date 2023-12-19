@@ -1,0 +1,24 @@
+<mat-toolbar color="accent">
+    <button mat-icon-button>
+        <mat-icon>home</mat-icon>
+    </button>
+    <span>Material UI</span>
+    <span class="example-spacer"></span>
+    <button mat-button>home</button>
+    <button mat-button [matMenuTriggerFor]="submenu">About</button>
+    <mat-menu #submenu>
+        <button mat-menu-item [matMenuTriggerFor]="submenu1">Company</button>
+        <button mat-menu-item>Customer</button>
+        <button mat-menu-item>Product</button>
+    </mat-menu>
+    <mat-menu #submenu1>
+        <button mat-menu-item>HR</button>
+        <button mat-menu-item>Manager</button>
+        <button mat-menu-item>Employee</button>
+    </mat-menu>
+    <button mat-button>Contact</button>
+    <button mat-raised-button color="primary">SignUp</button>
+    <button mat-icon-button (click)="badgevisibility()"><mat-icon matBadge="{{i}}" [matBadgeHidden]="badgevisible" matBadgeColor="warn">shopping_cart</mat-icon></button>
+</mat-toolbar>
+<br>
+<button mat-raised-button color="warn" (click)="add()">Add</button>
